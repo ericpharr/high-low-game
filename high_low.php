@@ -2,9 +2,12 @@
 
 if ($argc > 3) {
 	echo "too many args";
+} else if ($argc == 3) {
+	$number = rand($argv[1], $argv[2]);
+} else {
+	$number = rand(1, 100);
 }
 
-$number = rand($argv[1], $argv[2]);
 
 fwrite(STDOUT, "Guess ? ");
 
